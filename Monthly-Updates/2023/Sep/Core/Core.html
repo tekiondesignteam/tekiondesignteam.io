@@ -1,0 +1,1403 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+<meta charset="utf-8" />
+<meta content="width=device-width" name="viewport" />
+<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+<meta name="x-apple-disable-message-reformatting" />
+<meta content="telephone=no,address=no,email=no,date=no,url=no" name="format-detection" />
+<title>Core</title>
+<!--[if mso]>
+            <style>
+                * {
+                    font-family: sans-serif !important;
+                }
+            </style>
+        <![endif]-->
+<!--[if !mso]><!-->
+<!-- <![endif]-->
+<style>
+html {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+* {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+td {
+    vertical-align: top;
+    mso-table-lspace: 0pt !important;
+    mso-table-rspace: 0pt !important;
+}
+a {
+    text-decoration: none;
+}
+img {
+    -ms-interpolation-mode:bicubic;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+    u ~ div .email-container {
+        min-width: 320px !important;
+    }
+}
+@media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+    u ~ div .email-container {
+        min-width: 375px !important;
+    }
+}
+@media only screen and (min-device-width: 414px) {
+    u ~ div .email-container {
+        min-width: 414px !important;
+    }
+}
+</style>
+<!--[if gte mso 9]>
+        <xml>
+            <o:OfficeDocumentSettings>
+                <o:AllowPNG/>
+                <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
+        <![endif]-->
+<style>
+@media only screen and (max-device-width: 619px), only screen and (max-width: 619px) {
+
+    .eh {
+        height:auto !important;
+    }
+    .desktop {
+        display: none !important;
+        height: 0 !important;
+        margin: 0 !important;
+        max-height: 0 !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        visibility: hidden !important;
+        width: 0 !important;
+    }
+    .mobile {
+        display: block !important;
+        width: auto !important;
+        height: auto !important;
+        float: none !important;
+    }
+    .email-container {
+        width: 100% !important;
+        margin: auto !important;
+    }
+    .stack-column,
+    .stack-column-center {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        direction: ltr !important;
+    }
+    .wid-auto {
+        width:auto !important;
+    }
+
+    .table-w-full-mobile {
+        width: 100%;
+    }
+
+    
+    
+
+    .mobile-center {
+        text-align: center;
+    }
+
+    .mobile-center > table {
+        display: inline-block;
+        vertical-align: inherit;
+    }
+
+    .mobile-left {
+        text-align: left;
+    }
+
+    .mobile-left > table {
+        display: inline-block;
+        vertical-align: inherit;
+    }
+
+    .mobile-right {
+        text-align: right;
+    }
+
+    .mobile-right > table {
+        display: inline-block;
+        vertical-align: inherit;
+    }
+
+}
+
+</style>
+</head>
+
+<body width="100%" style="background-color:#152532;margin:0;padding:0!important;mso-line-height-rule:exactly;">
+<div style="background-color:#152532">
+<!--[if gte mso 9]>
+                                            <v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
+                                            <v:fill type="tile" color="#152532"/>
+                                            </v:background>
+                                            <![endif]-->
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td valign="top" align="center">
+<table bgcolor="#ffffff" style="margin:0 auto;" align="center" id="brick_container" cellspacing="0" cellpadding="0" border="0" width="620" class="email-container">
+<tr>
+<td width="620">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="100%">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="620" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="620">
+<table cellpadding="0" cellspacing="0" bgcolor="#00bfa5" height="4" width="100%" style="line-height:4px;height:4px!important;background-color:#00bfa5;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="620" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="620">
+<table cellpadding="0" cellspacing="0" bgcolor="#edeef0" height="20" width="100%" style="line-height:20px;height:20px!important;background-color:#edeef0;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="100%">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="100%" style="vertical-align: middle; background-color:#edeef0;   padding-left:24px; padding-right:24px;" bgcolor="#edeef0">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="vertical-align: middle;" width="31"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2023/Sep/Core/images/Eaccx7klV0mk3VuuXqQYhOgRB9kvVk.png" width="31" border="0" style="min-width:31px; width:31px;
+         min-width:31px; width:31px; height: auto; display: block;"></td>
+<td style="width:16px; min-width:16px;" width="16"></td>
+<td style="vertical-align: middle;" width="423">
+<div style="line-height:28px;text-align:left;"><span style="color:#161616;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:22px;line-height:28px;text-align:left;">Core - September Design Updates</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="620" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="620">
+<table cellpadding="0" cellspacing="0" bgcolor="#edeef0" height="20" width="100%" style="line-height:20px;height:20px!important;background-color:#edeef0;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="620">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572" align="center" style="background-color:#ffffff;   padding-left:24px; padding-right:24px;" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:32px;text-align:left;"><span style="color:#161616;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:20px;line-height:32px;text-align:left;">Report Builder | Reports Library</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:20px;text-align:left;"><a href="https://www.figma.com/file/568jxI7wLMV0vekDRhwcnR/Reports-Library?type=design&node-id=412%3A64353&mode=design&t=EE6Guc0d4Dij3jX4-1"><span style="color:#4285f4;font-family:Tahoma,Arial,sans-serif;font-size:14px;text-decoration:underline;line-height:20px;text-align:left;">Figma Link</span></a></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="572" align="center"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2023/Sep/Core/images/FExTW2HA6dXSyaztgI9sGnwL0SZJv4.png" width="572" border="0" style="
+        border-radius:8px; width: 100%; height: auto; display: block;"></td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">To ease report generation for the ISM team for single/multiple/all tenants using report templates. This will help ease dealer onboarding from a reporting perspective as well as solve new reporting use cases that need to be shared with existing dealers.</span></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572" align="center">
+<table class="table-w-full-mobile" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" width="100%" class="stack-column-center">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="100%" align="right">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="48" align="right"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2023/Sep/Core/images/gszyOXoYXpt87BqpCQubMHFopoiFnT.png" width="48" border="0" style="min-width:48px; width:48px;
+        border-radius:24px; min-width:48px; width:48px; height: auto; display: block;"></td>
+<td style="width:12px; min-width:12px;" width="12"></td>
+<td align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Avenir LT Pro,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Prasheed CP</span></div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#969aa3;font-family:Avenir LT Pro,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Senior Product Designer</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="572" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572">
+<table cellpadding="0" cellspacing="0" bgcolor="#edeef0" height="1" width="100%" style="line-height:1px;height:1px!important;background-color:#edeef0;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="572" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572">
+<table cellpadding="0" cellspacing="0" bgcolor="#d4d5d6" height="1" width="100%" style="line-height:1px;height:1px!important;background-color:#d4d5d6;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="620">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572" align="center" style="background-color:#ffffff;   padding-left:24px; padding-right:24px;" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:32px;text-align:left;"><span style="color:#161616;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:20px;line-height:32px;text-align:left;">Report Builder | UX Enhancement</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:20px;text-align:left;"><a href="https://www.figma.com/file/QNgb1loFvRPVhq7zdy9CVq/RB-UX?type=design&node-id=0%3A1&mode=design&t=e0uZX6ZLhpX5xNFH-1"><span style="color:#4285f4;font-family:Tahoma,Arial,sans-serif;font-size:14px;text-decoration:underline;line-height:20px;text-align:left;">Figma Link</span></a></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="572" align="center"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2023/Sep/Core/images/jKFmQvVrnMfTHCc3MtmvT3Lr04Z2V9.png" width="572" border="0" style="
+        border-radius:8px; width: 100%; height: auto; display: block;"></td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">We're excited to share that we've made significant UX improvements to our Report Builder based on user feedback. These enhancements include streamlined navigation, improved data visualization, responsive design, and a more intuitive user interface. We're committed to providing you with an even better reporting experience.</span></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572" align="center">
+<table class="table-w-full-mobile" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" width="100%" class="stack-column-center">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="100%" align="right">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="48" align="right"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2023/Sep/Core/images/rQ27lwlnZBD6lAf8Q16vAMXUEDESFc.png" width="48" border="0" style="min-width:48px; width:48px;
+        border-radius:24px; min-width:48px; width:48px; height: auto; display: block;"></td>
+<td style="width:12px; min-width:12px;" width="12"></td>
+<td align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Avenir LT Pro,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Prasheed CP</span></div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#969aa3;font-family:Avenir LT Pro,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Senior Product Designer</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="572" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572">
+<table cellpadding="0" cellspacing="0" bgcolor="#edeef0" height="1" width="100%" style="line-height:1px;height:1px!important;background-color:#edeef0;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="572" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572">
+<table cellpadding="0" cellspacing="0" bgcolor="#d4d5d6" height="1" width="100%" style="line-height:1px;height:1px!important;background-color:#d4d5d6;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="620">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572" align="center" style="background-color:#ffffff;   padding-left:24px; padding-right:24px;" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:32px;text-align:left;"><span style="color:#161616;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:20px;line-height:32px;text-align:left;">Dealer Configuration - Sites & Department</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:20px;text-align:left;"><a href="https://www.figma.com/file/s5uxpWaklMIfkE98JxVV5D?node-id=1041:76684&mode=design#504777161"><span style="color:#4285f4;font-family:Tahoma,Arial,sans-serif;font-size:14px;text-decoration:underline;line-height:20px;text-align:left;">Figma Link</span></a></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="572" align="center"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2023/Sep/Core/images/0pdOJseTyOqCSFo3sA7riAyYzkm1Nf.png" width="572" border="0" style="
+        border-radius:8px; width: 100%; height: auto; display: block;"></td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">In Dealer Configurations, we designed a section where the user can add multiple sites and under each site they can add multiple departments. The user can edit or delete each sites. In the dealer configuration screen, the user can see the already added sites , departments and location in table format which is easy for them to recognise and navigate accordingly.</span></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572" align="center">
+<table class="table-w-full-mobile" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" width="100%" class="stack-column-center">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="100%" align="right">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="48" align="right"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2023/Sep/Core/images/3AxhldFofZOnPngd43NL2xSxNiB3y5.png" width="48" border="0" style="min-width:48px; width:48px;
+        border-radius:24px; min-width:48px; width:48px; height: auto; display: block;"></td>
+<td style="width:12px; min-width:12px;" width="12"></td>
+<td align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Sayantani Sarkar</span></div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#969aa3;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Product Designer</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="572" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572">
+<table cellpadding="0" cellspacing="0" bgcolor="#edeef0" height="1" width="100%" style="line-height:1px;height:1px!important;background-color:#edeef0;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="572" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572">
+<table cellpadding="0" cellspacing="0" bgcolor="#d4d5d6" height="1" width="100%" style="line-height:1px;height:1px!important;background-color:#d4d5d6;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="620">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572" align="center" style="background-color:#ffffff;   padding-left:24px; padding-right:24px;" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:32px;text-align:left;"><span style="color:#161616;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:20px;line-height:32px;text-align:left;">Customer Management | Add Customer</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:20px;text-align:left;"><a href="https://www.figma.com/file/UeZgdqrKaoKE8FzyWIvQFq/Customer-Management-Enhancements?type=design&node-id=0-1&mode=design&t=l25CVHknSoSrVAb9-0"><span style="color:#4285f4;font-family:Tahoma,Arial,sans-serif;font-size:14px;text-decoration:underline;line-height:20px;text-align:left;">Figma Link</span></a></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="572" align="center"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2023/Sep/Core/images/y32oL0SZaxLiTNz0TXIOYP1pbkZtvN.png" width="572" border="0" style="
+        border-radius:8px; width: 100%; height: auto; display: block;"></td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Responding to Live User Sentiment from Users we bringing in ways for Users to add in optional information like address and vehicle details when they add a new customer. Currently, Users have to create a Customer record, browse it in Customer Management and then fill in the extra details. This improvement will reduce friction for Users who wanted to add the information in one go by getting rid of couple of extra steps in between.</span></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="100%">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572" align="center">
+<table class="table-w-full-mobile" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" width="100%" class="stack-column-center">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="100%" align="right">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="48" align="right"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2023/Sep/Core/images/TBwPpaLAsBTwDEvZt7HBvtONw2DheQ.png" width="48" border="0" style="min-width:48px; width:48px;
+        border-radius:48px; min-width:48px; width:48px; height: auto; display: block;"></td>
+<td style="width:12px; min-width:12px;" width="12"></td>
+<td align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Sandra Selince</span></div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#969aa3;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Senior Product Designer</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="572" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572">
+<table cellpadding="0" cellspacing="0" bgcolor="#edeef0" height="1" width="100%" style="line-height:1px;height:1px!important;background-color:#edeef0;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="572" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572">
+<table cellpadding="0" cellspacing="0" bgcolor="#d4d5d6" height="1" width="100%" style="line-height:1px;height:1px!important;background-color:#d4d5d6;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="620">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572" align="center" style="background-color:#ffffff;   padding-left:24px; padding-right:24px;" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:32px;text-align:left;"><span style="color:#161616;font-weight:700;font-family:Proxima Nova,Arial,sans-serif;font-size:20px;line-height:32px;text-align:left;">Invoice Sequence</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:20px;text-align:left;"><a href="https://www.figma.com/file/WFCMQpym4XoVYZbfXkRwNU/Implementation-Automation?type=design&node-id=2066%3A11551&mode=design&t=iLgBymsKiGTW8ez7-1"><span style="color:#4285f4;font-family:Tahoma,Arial,sans-serif;font-size:14px;text-decoration:underline;line-height:20px;text-align:left;">Figma Link</span></a></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="572" align="center"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2023/Sep/Core/images/jQxmMlAbkeoI9WLWQvUUMk4wmVSH16.png" width="572" border="0" style="
+        border-radius:8px; width: 100%; height: auto; display: block;"></td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">We have updated the design for the invoice sequence to support complex use cases from various departments like Parts, Retails, Sales and Service. These latest updates will enable us to be future ready, improve operational inefficiency and make the system scalable.</span></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="100%">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572" align="center">
+<table class="table-w-full-mobile" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" width="100%" class="stack-column-center">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="100%" align="right">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="48" align="right"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2023/Sep/Core/images/taqYbIEsDv7kDf6Ig9axk8tD4O5xGG.png" width="48" border="0" style="min-width:48px; width:48px;
+        border-radius:48px; min-width:48px; width:48px; height: auto; display: block;"></td>
+<td style="width:12px; min-width:12px;" width="12"></td>
+<td align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Niranjan Gupta</span></div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#969aa3;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Senior Product Designer</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="572" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572">
+<table cellpadding="0" cellspacing="0" bgcolor="#edeef0" height="1" width="100%" style="line-height:1px;height:1px!important;background-color:#edeef0;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="572" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572">
+<table cellpadding="0" cellspacing="0" bgcolor="#d4d5d6" height="1" width="100%" style="line-height:1px;height:1px!important;background-color:#d4d5d6;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="620">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572" align="center" style="background-color:#ffffff;   padding-left:24px; padding-right:24px;" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:32px;text-align:left;"><span style="color:#161616;font-weight:700;font-family:Proxima Nova,Arial,sans-serif;font-size:20px;line-height:32px;text-align:left;">CRM - List View Configuration</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:20px;text-align:left;"><a href="https://www.figma.com/file/kuneQINEdwVIeyPvKknC4L/Filter-Changes---CRM?type=design&node-id=4%3A11471&mode=design&t=GxMY1568qKc0wgOI-1"><span style="color:#4285f4;font-family:Tahoma,Arial,sans-serif;font-size:14px;text-decoration:underline;line-height:20px;text-align:left;">Figma Link</span></a></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="572" align="center"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2023/Sep/Core/images/gnhGu0zmDWSLXoNzKsCYlaBPqxvxRN.png" width="572" border="0" style="
+        border-radius:8px; width: 100%; height: auto; display: block;"></td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">We have improved the experience of applying filters, choosing date ranges, and sharing CRM list view with the appropriate dealer users. With these changes we have improved the user experience and made it more contextual, ensuring better alignment with their specific needs and use cases.</span></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="100%">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572" align="center">
+<table class="table-w-full-mobile" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" width="100%" class="stack-column-center">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="100%" align="right">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="48" align="right"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2023/Sep/Core/images/2iV4VswMV8GbXVJsjbvNQOgkKeGcrh.png" width="48" border="0" style="min-width:48px; width:48px;
+        border-radius:48px; min-width:48px; width:48px; height: auto; display: block;"></td>
+<td style="width:12px; min-width:12px;" width="12"></td>
+<td align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Niranjan Gupta</span></div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#969aa3;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Senior Product Designer</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="572" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572">
+<table cellpadding="0" cellspacing="0" bgcolor="#edeef0" height="1" width="100%" style="line-height:1px;height:1px!important;background-color:#edeef0;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="572" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572">
+<table cellpadding="0" cellspacing="0" bgcolor="#d4d5d6" height="1" width="100%" style="line-height:1px;height:1px!important;background-color:#d4d5d6;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="620">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572" align="center" style="background-color:#ffffff;   padding-left:24px; padding-right:24px;" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:32px;text-align:left;"><span style="color:#161616;font-weight:700;font-family:Proxima Nova,Arial,sans-serif;font-size:20px;line-height:32px;text-align:left;">Tekion Outage Status for Dealer Users</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:20px;text-align:left;"><a href="https://www.figma.com/file/tZS6qIKlAsFVVeQ3kqSfgN/Outage-communication?type=design&node-id=6759%3A47896&mode=design&t=hOB7MNIL4brZWhO4-1"><span style="color:#4285f4;font-family:Tahoma,Arial,sans-serif;font-size:14px;text-decoration:underline;line-height:20px;text-align:left;">Figma Link</span></a></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="572" align="center"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2023/Sep/Core/images/NwQEjO0tLTQVtK5MrvrLOuRjH632Pp.png" width="572" border="0" style="
+        border-radius:8px; width: 100%; height: auto; display: block;"></td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">We have improved the experience of Tekion status page tailoring it for people with single and multi dealer store access. These latest changes allow them to quickly glance the issues and see if they have been impacted by any outage.</span></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="100%">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572" align="center">
+<table class="table-w-full-mobile" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" width="100%" class="stack-column-center">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="100%" align="right">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="48" align="right"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2023/Sep/Core/images/ryG5TdUAcPz8021zNDOUFQ8VriARXf.png" width="48" border="0" style="min-width:48px; width:48px;
+        border-radius:48px; min-width:48px; width:48px; height: auto; display: block;"></td>
+<td style="width:12px; min-width:12px;" width="12"></td>
+<td align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Niranjan Gupta</span></div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#969aa3;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Senior Product Designer</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="572" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572">
+<table cellpadding="0" cellspacing="0" bgcolor="#edeef0" height="1" width="100%" style="line-height:1px;height:1px!important;background-color:#edeef0;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="572" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572">
+<table cellpadding="0" cellspacing="0" bgcolor="#d4d5d6" height="1" width="100%" style="line-height:1px;height:1px!important;background-color:#d4d5d6;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="620">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572" align="center" style="background-color:#ffffff;   padding-left:24px; padding-right:24px;" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:32px;text-align:left;"><span style="color:#161616;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:20px;line-height:32px;text-align:left;">Honda CPRA - Request Creation Updates</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:20px;text-align:left;"><a href="https://www.figma.com/file/EI6u6C6LAlIWVpvYkzKqNj/branch/YWgzevvfF7Db49IWY3BUw3/CPRA---Honda?type=design&node-id=1%3A33&mode=design&t=bOJiLbfDMD7fnRd0-1"><span style="color:#4285f4;font-family:Tahoma,Arial,sans-serif;font-size:14px;text-decoration:underline;line-height:20px;text-align:left;">Figma Link</span></a></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="572" align="center"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2023/Sep/Core/images/iHyX5FNfPfwUU89hZlaa9tRNt3pOZ4.png" width="572" border="0" style="
+        border-radius:6px; max-width:572px; width: 100%; height: auto; display: block;"></td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">We've implemented a better workflow for managing multi-source data requests from Honda. This new process consolidates lead and customer data into a single location, streamlining the workflow for the Data Privacy Offers in the dealership. This enables our users to handle multiple data points simultaneously, enhancing our overall responsiveness and efficiency in serving Honda's data needs.</span></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572" align="center">
+<table class="table-w-full-mobile" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" width="100%" class="stack-column-center">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="100%" align="right">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="48" align="right"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2023/Sep/Core/images/6vxaFrTVrezqXEJp96YiHZqBbIh3i7.png" width="48" border="0" style="min-width:48px; width:48px;
+         min-width:48px; width:48px; height: auto; display: block;"></td>
+<td style="width:12px; min-width:12px;" width="12"></td>
+<td align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Sougata Nair</span></div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#969aa3;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Product Design Lead</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="572" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572">
+<table cellpadding="0" cellspacing="0" bgcolor="#edeef0" height="1" width="100%" style="line-height:1px;height:1px!important;background-color:#edeef0;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="572" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572">
+<table cellpadding="0" cellspacing="0" bgcolor="#d4d5d6" height="1" width="100%" style="line-height:1px;height:1px!important;background-color:#d4d5d6;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="620">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572" align="center" style="background-color:#ffffff;   padding-left:24px; padding-right:24px;" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:32px;text-align:left;"><span style="color:#161616;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:20px;line-height:32px;text-align:left;">Vendor Payment Terms</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:20px;text-align:left;"><a href="https://www.figma.com/file/EI6u6C6LAlIWVpvYkzKqNj/branch/YWgzevvfF7Db49IWY3BUw3/CPRA---Honda?type=design&node-id=1%3A33&mode=design&t=bOJiLbfDMD7fnRd0-1"><span style="color:#4285f4;font-family:Tahoma,Arial,sans-serif;font-size:14px;text-decoration:underline;line-height:20px;text-align:left;">Figma Link</span></a></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="572" align="center"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2023/Sep/Core/images/ciH52XSrjoy9beRpQnnbKOQpa0HFee.png" width="572" border="0" style="
+        border-radius:6px; max-width:572px; width: 100%; height: auto; display: block;"></td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">We've revamped our Vendor payment processes by enhancing the default payment terms associated with vendor setups. This enhancement allows us to exercise finer control over payment terms, enabling our DP Users to efficiently apply bulk payment terms for vendors throughout the dealership. This will contribute to better financial management, vendor relationships, streamlining their operations.</span></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572" align="center">
+<table class="table-w-full-mobile" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" width="100%" class="stack-column-center">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="100%" align="right">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="48" align="right"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2023/Sep/Core/images/eMgXvgmjVNfliPxUFgQqUPYRvlzQHz.png" width="48" border="0" style="min-width:48px; width:48px;
+         min-width:48px; width:48px; height: auto; display: block;"></td>
+<td style="width:12px; min-width:12px;" width="12"></td>
+<td align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Sougata Nair</span></div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#969aa3;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Product Design Lead</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="572" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572">
+<table cellpadding="0" cellspacing="0" bgcolor="#edeef0" height="1" width="100%" style="line-height:1px;height:1px!important;background-color:#edeef0;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="572" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572">
+<table cellpadding="0" cellspacing="0" bgcolor="#d4d5d6" height="1" width="100%" style="line-height:1px;height:1px!important;background-color:#d4d5d6;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</body>
+
+</html>
