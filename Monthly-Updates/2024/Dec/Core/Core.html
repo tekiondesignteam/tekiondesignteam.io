@@ -1,0 +1,1283 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+<meta charset="utf-8" />
+<meta content="width=device-width" name="viewport" />
+<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+<meta name="x-apple-disable-message-reformatting" />
+<meta content="telephone=no,address=no,email=no,date=no,url=no" name="format-detection" />
+<title>Core</title>
+<!--[if mso]>
+            <style>
+                * {
+                    font-family: sans-serif !important;
+                }
+            </style>
+        <![endif]-->
+<!--[if !mso]><!-->
+<!-- <![endif]-->
+<style>
+html {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+* {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+td {
+    vertical-align: top;
+    mso-table-lspace: 0pt !important;
+    mso-table-rspace: 0pt !important;
+}
+a {
+    text-decoration: none;
+}
+img {
+    -ms-interpolation-mode:bicubic;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+    u ~ div .email-container {
+        min-width: 320px !important;
+    }
+}
+@media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+    u ~ div .email-container {
+        min-width: 375px !important;
+    }
+}
+@media only screen and (min-device-width: 414px) {
+    u ~ div .email-container {
+        min-width: 414px !important;
+    }
+}
+</style>
+<!--[if gte mso 9]>
+        <xml>
+            <o:OfficeDocumentSettings>
+                <o:AllowPNG/>
+                <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
+        <![endif]-->
+<style>
+@media only screen and (max-device-width: 619px), only screen and (max-width: 619px) {
+
+    .eh {
+        height:auto !important;
+    }
+    .desktop {
+        display: none !important;
+        height: 0 !important;
+        margin: 0 !important;
+        max-height: 0 !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        visibility: hidden !important;
+        width: 0 !important;
+    }
+    .mobile {
+        display: block !important;
+        width: auto !important;
+        height: auto !important;
+        float: none !important;
+    }
+    .email-container {
+        width: 100% !important;
+        margin: auto !important;
+    }
+    .stack-column,
+    .stack-column-center {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        direction: ltr !important;
+    }
+    .wid-auto {
+        width:auto !important;
+    }
+
+    .table-w-full-mobile {
+        width: 100%;
+    }
+
+    
+    
+
+    .mobile-center {
+        text-align: center;
+    }
+
+    .mobile-center > table {
+        display: inline-block;
+        vertical-align: inherit;
+    }
+
+    .mobile-left {
+        text-align: left;
+    }
+
+    .mobile-left > table {
+        display: inline-block;
+        vertical-align: inherit;
+    }
+
+    .mobile-right {
+        text-align: right;
+    }
+
+    .mobile-right > table {
+        display: inline-block;
+        vertical-align: inherit;
+    }
+
+}
+
+</style>
+</head>
+
+<body width="100%" style="background-color:#152532;margin:0;padding:0!important;mso-line-height-rule:exactly;">
+<div style="background-color:#152532">
+<!--[if gte mso 9]>
+                                            <v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
+                                            <v:fill type="tile" color="#152532"/>
+                                            </v:background>
+                                            <![endif]-->
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td valign="top" align="center">
+<table bgcolor="#ffffff" style="margin:0 auto;" align="center" id="brick_container" cellspacing="0" cellpadding="0" border="0" width="620" class="email-container">
+<tr>
+<td width="620">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="620" style="background-color:#ffffff;  " bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="620" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="620">
+<table cellpadding="0" cellspacing="0" bgcolor="#00bfa5" height="4" width="100%" style="line-height:4px;height:4px!important;background-color:#00bfa5;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="620" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="620">
+<table cellpadding="0" cellspacing="0" bgcolor="#edeef0" height="20" width="100%" style="line-height:20px;height:20px!important;background-color:#edeef0;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="100%">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="100%" style="vertical-align: middle; background-color:#edeef0;   padding-left:24px; padding-right:24px;" bgcolor="#edeef0">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="vertical-align: middle;" width="31"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2024/Dec/Core/images/HI0wz2vG5WjCzMEfC2cSKl5y6avQxo.png" width="31" border="0" style="min-width:31px; width:31px;
+         height: auto; display: block;"></td>
+<td style="width:16px; min-width:16px;" width="16"></td>
+<td style="vertical-align: middle;" width="423">
+<div style="line-height:28px;text-align:left;"><span style="color:#161616;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:22px;line-height:28px;text-align:left;">Core - December Design Updates</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="620" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="620">
+<table cellpadding="0" cellspacing="0" bgcolor="#edeef0" height="20" width="100%" style="line-height:20px;height:20px!important;background-color:#edeef0;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="620">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572" align="center" style="background-color:#ffffff;   padding-left:24px; padding-right:24px;" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:32px;text-align:left;"><span style="color:#161616;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:20px;line-height:32px;text-align:left;">User Setup</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:20px;text-align:left;"><a style="color:#4285f4;font-family:Tahoma,Arial,sans-serif;font-size:14px;line-height:20px;text-align:left;text-decoration:underline;" href="https://www.figma.com/file/EW0Jlh8BwfRLMFcqtNUyMX/User-Setup?type=design&node-id=104%3A19648&mode=design&t=fPhPyHVJvBFfLhdk-1">
+<span>Figma Prototype</span></a></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="100%" style="background-color:#ffffff; border-radius:8px; border:1px solid #d4d5d6;" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2024/Dec/Core/images/gTPF5Z9N1PYk9VGgEbAdqEkzbcnuwz.png" width="572" alt="Banner" border="0" style="width: 100%;
+        border-radius:8px; height: auto; display: block;"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Our focus has been on enhancing user experience and flexibility within the platform. We have successfully implemented a dynamic user setup feature that allows individuals to create both corporate and non-corporate accounts based on their role type within the organisation. One of the key advancements is the empowerment of users to tailor their product access. Depending on their role and region, users can now customise their access to specific features, ensuring a more personalised and efficient experience within our enterprise product.<br>This development not only streamlines user interactions but also aligns with our commitment to providing a more intuitive and adaptable platform for our diverse user base.</span></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572" align="center">
+<table class="table-w-full-mobile" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" width="100%" class="stack-column-center">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="100%" align="right">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="48" align="right"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2024/Dec/Core/images/CSR5KNm98ti0KuBMNBn13iFsYT0boK.png" width="48" border="0" style="min-width:48px; width:48px;
+         height: auto; display: block;"></td>
+<td style="width:12px; min-width:12px;" width="12"></td>
+<td align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Sayantani Sarkar</span></div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#969aa3;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Product Design</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="572" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572">
+<table cellpadding="0" cellspacing="0" bgcolor="#edeef0" height="1" width="100%" style="line-height:1px;height:1px!important;background-color:#edeef0;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="620">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572" align="center" style="background-color:#ffffff;   padding-left:24px; padding-right:24px;" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:32px;text-align:left;"><span style="color:#161616;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:20px;line-height:32px;text-align:left;">Approval Management</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:20px;text-align:left;"><a style="color:#4285f4;font-family:Tahoma,Arial,sans-serif;font-size:14px;line-height:20px;text-align:left;text-decoration:underline;" href="https://www.figma.com/file/d9vHxzHBrq2ZYZLd09Ss1X/Approval-Management?type=design&node-id=4%3A41772&mode=design&t=Qf9cxfkxML8Ek1UM-1">
+<span>Figma Prototype</span></a></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="100%" style="background-color:#ffffff; border-radius:8px; border:1px solid #d4d5d6;" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2024/Dec/Core/images/cpshEt5gMapx6r37ecByVznKhM1LsS.png" width="572" alt="Banner" border="0" style="width: 100%;
+        border-radius:8px; height: auto; display: block;"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">We have implemented a new feature that allows users to resubmit requests seamlessly. The new resubmission feature is designed to streamline the approval management workflow, ensuring a more intuitive and user-friendly experience. This feature caters to both the submitter and requester sides, offering a comprehensive solution that addresses the needs of all stakeholders involved in the approval process.</span></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572" align="center">
+<table class="table-w-full-mobile" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" width="100%" class="stack-column-center">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="100%" align="right">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="48" align="right"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2024/Dec/Core/images/7KzKoEA8DGvyJgi4SUxqSoKRBMYvv0.png" width="48" border="0" style="min-width:48px; width:48px;
+         height: auto; display: block;"></td>
+<td style="width:12px; min-width:12px;" width="12"></td>
+<td align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Sayantani Sarkar</span></div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#969aa3;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Product Design</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="572" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572">
+<table cellpadding="0" cellspacing="0" bgcolor="#edeef0" height="1" width="100%" style="line-height:1px;height:1px!important;background-color:#edeef0;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="620">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572" align="center" style="background-color:#ffffff;   padding-left:24px; padding-right:24px;" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:32px;text-align:left;"><span style="color:#161616;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:20px;line-height:32px;text-align:left;">Sequence Setup - Document & Invoice</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:20px;text-align:left;"><a style="color:#4285f4;font-family:Tahoma,Arial,sans-serif;font-size:14px;line-height:20px;text-align:left;text-decoration:underline;" href="https://www.figma.com/file/iFYHiqubqPrzdH4hCdR1Rs/Sequence-Setup?type=design&node-id=2749%3A91642&mode=design&t=JzWKeDNxfG5ZY0r7-1">
+<span>Figma Prototype</span></a></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="100%" style="background-color:#ffffff; border-radius:8px; border:1px solid #d4d5d6;" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2024/Dec/Core/images/2qeojWWrltk4MhniU3SjwxTq4xNJCP.png" width="572" alt="Banner" border="0" style="width: 100%;
+        border-radius:8px; height: auto; display: block;"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">The Sequence Setup feature plays a crucial role in defining document and invoice sequences along with their patterns generated during diverse dealership processes. Our recent design update enhances this functionality to accommodate advanced use cases, specifically tailored for North America, Inchcape, and RRG dealerships. The refined design now seamlessly supports complex scenarios such as multi-invoicing, credit memos, quotes, and others, providing a comprehensive solution for a wide range of dealership needs.</span></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572" align="center">
+<table class="table-w-full-mobile" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" width="100%" class="stack-column-center">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="100%" align="right">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="48" align="right"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2024/Dec/Core/images/gdssYRqwDDCtUrNPQp5yixtXA47HEh.png" width="48" border="0" style="min-width:48px; width:48px;
+         height: auto; display: block;"></td>
+<td style="width:12px; min-width:12px;" width="12"></td>
+<td align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Niranjan Gupta</span></div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#969aa3;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Senior Product Designer</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="572" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572">
+<table cellpadding="0" cellspacing="0" bgcolor="#edeef0" height="1" width="100%" style="line-height:1px;height:1px!important;background-color:#edeef0;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="620">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572" align="center" style="background-color:#ffffff;   padding-left:24px; padding-right:24px;" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:32px;text-align:left;"><span style="color:#161616;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:20px;line-height:32px;text-align:left;">Enterprise Roles and Permission</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:20px;text-align:left;"><a style="color:#4285f4;font-family:Tahoma,Arial,sans-serif;font-size:14px;line-height:20px;text-align:left;text-decoration:underline;" href="https://www.figma.com/file/wbYfAlmtFqJMdj5qwKzFHC/Roles-and-Permission?type=design&node-id=658%3A38273&mode=design&t=UaPJrgmZ7hGaiRxD-1">
+<span>Figma Prototype</span></a></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="100%" style="background-color:#ffffff; border-radius:8px; border:1px solid #d4d5d6;" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2024/Dec/Core/images/gDPVJTpCZG8tEyY3J5L9BtWl9CG9cn.png" width="572" alt="Banner" border="0" style="width: 100%;
+        border-radius:8px; height: auto; display: block;"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">The Roles and Permissions module in ARC has been redesigned to address the specific needs of enterprise-level applications, aligning with Inchcape's requirements. This enhanced functionality now allows corporate or enterprise users to centrally configure roles and associated permissions within the corporate workspace. Approval of role requests is streamlined through a centralized workspace, providing efficient oversight. Additionally, user management for various dealership and subsidiaries is now conveniently handled within a unified workspace.</span></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572" align="center">
+<table class="table-w-full-mobile" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" width="100%" class="stack-column-center">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="100%" align="right">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="48" align="right"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2024/Dec/Core/images/y5JSrOALXopVPgykFbckBiATACKPKe.png" width="48" border="0" style="min-width:48px; width:48px;
+         height: auto; display: block;"></td>
+<td style="width:12px; min-width:12px;" width="12"></td>
+<td align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Niranjan Gupta</span></div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#969aa3;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Senior Product Designer</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="572" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572">
+<table cellpadding="0" cellspacing="0" bgcolor="#edeef0" height="1" width="100%" style="line-height:1px;height:1px!important;background-color:#edeef0;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="620">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572" align="center" style="background-color:#ffffff;   padding-left:24px; padding-right:24px;" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:32px;text-align:left;"><span style="color:#161616;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:20px;line-height:32px;text-align:left;">Approval Workflow: Partial Match</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:20px;text-align:left;"><a style="color:#4285f4;font-family:Tahoma,Arial,sans-serif;font-size:14px;line-height:20px;text-align:left;text-decoration:underline;" href="https://www.figma.com/file/d9vHxzHBrq2ZYZLd09Ss1X/Approval-Management?type=design&node-id=2071%3A40320&mode=design&t=cR275VqcNHxNbJad-1">
+<span>Figma Prototype</span></a></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="100%" style="background-color:#ffffff; border-radius:8px; border:1px solid #d4d5d6;" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2024/Dec/Core/images/ZursAFT6yTqmykMRJ35F0kSMRus6wH.jpeg" width="572" alt="Banner" border="0" style="width: 100%;
+        border-radius:8px; height: auto; display: block;"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">In an incremental update to the new Approval Management workflow, we have introduced a mechanism to detect partial matches in Posting Amount ranges in Journal Entries.</span></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572" align="center">
+<table class="table-w-full-mobile" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" width="100%" class="stack-column-center">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="100%" align="right">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="48" align="right"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2024/Dec/Core/images/qg7tlrKQBb0y4AdRhcnZK13TlADSUT.png" width="48" border="0" style="min-width:48px; width:48px;
+         height: auto; display: block;"></td>
+<td style="width:12px; min-width:12px;" width="12"></td>
+<td align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Sougata Nair</span></div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#969aa3;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Product Design Lead</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="572" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572">
+<table cellpadding="0" cellspacing="0" bgcolor="#edeef0" height="1" width="100%" style="line-height:1px;height:1px!important;background-color:#edeef0;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="620">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572" align="center" style="background-color:#ffffff;   padding-left:24px; padding-right:24px;" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:32px;text-align:left;"><span style="color:#161616;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:20px;line-height:32px;text-align:left;">Enterprise Notifications</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:20px;text-align:left;"><a style="color:#4285f4;font-family:Tahoma,Arial,sans-serif;font-size:14px;line-height:20px;text-align:left;text-decoration:underline;" href="https://www.figma.com/proto/U5FV8L3H3EKLeqDtIgb8YU/Notifications-Setup?page-id=612%3A76189&type=design&node-id=616-78508&viewport=-21%2C-516%2C0.7&t=ZdaeKillGMirHygT-1&scaling=min-zoom&starting-point-node-id=616%3A78508&show-proto-sidebar=1&mode=design">
+<span>Figma Prototype</span></a></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="100%" style="background-color:#ffffff; border-radius:8px; border:1px solid #d4d5d6;" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2024/Dec/Core/images/mlR5mACMs2psT03z9JlYAbZlB1pQOg.png" width="572" alt="Banner" border="0" style="width: 100%;
+        border-radius:8px; height: auto; display: block;"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">We have designed the Enterprise Notifications Setup page so that the notifications can be configured by the higher authorities at the Enterprise levels, which gets applied to all the dealerships but for specific roles. </span></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572" align="center">
+<table class="table-w-full-mobile" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" width="572" class="stack-column-center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572" style="height:48px;  ">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572" align="center">
+<table class="table-w-full-mobile" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" width="100%" class="stack-column-center">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="100%" align="right">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="48" align="right"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2024/Dec/Core/images/DNVOuJaJrOvIsOUdzMOAs0IQOl3NiZ.png" width="48" border="0" style="min-width:48px; width:48px;
+         height: auto; display: block;"></td>
+<td style="width:12px; min-width:12px;" width="12"></td>
+<td align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Muskaan Agrawal</span></div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#969aa3;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Associate Product Designer</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="572" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572">
+<table cellpadding="0" cellspacing="0" bgcolor="#edeef0" height="1" width="100%" style="line-height:1px;height:1px!important;background-color:#edeef0;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="620">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572" align="center" style="background-color:#ffffff;   padding-left:24px; padding-right:24px;" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:32px;text-align:left;"><span style="color:#161616;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:20px;line-height:32px;text-align:left;">Enterprise Construct</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:20px;text-align:left;"><a style="color:#4285f4;font-family:Tahoma,Arial,sans-serif;font-size:14px;line-height:20px;text-align:left;text-decoration:underline;" href="https://www.figma.com/file/2rouGZd3wJY8rj3X7LMETC/Enterprise-Construct?type=design&node-id=1527%3A132457&mode=design&t=onp9id6HawULIBjt-1">
+<span>Figma Prototype</span></a></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="100%" style="background-color:#ffffff; border-radius:8px; border:1px solid #d4d5d6;" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2024/Dec/Core/images/GP34uAd5eXSydScwjs2v5GIJWGW4v6.png" width="572" alt="Banner" border="0" style="width: 100%;
+        border-radius:8px; height: auto; display: block;"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">We have designed the way the user from huge enterprise will be able to select his workspace on mobile.</span></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572" align="center">
+<table class="table-w-full-mobile" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" width="572" class="stack-column-center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572" style="height:48px;  ">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572" align="center">
+<table class="table-w-full-mobile" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" width="100%" class="stack-column-center">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="100%" align="right">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="48" align="right"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2024/Dec/Core/images/wKIrkq7JZxEI0YrQIVbP6yHNZRmwJS.png" width="48" border="0" style="min-width:48px; width:48px;
+         height: auto; display: block;"></td>
+<td style="width:12px; min-width:12px;" width="12"></td>
+<td align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Sandra Sélince</span></div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#969aa3;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Product Designer</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="572" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572">
+<table cellpadding="0" cellspacing="0" bgcolor="#edeef0" height="1" width="100%" style="line-height:1px;height:1px!important;background-color:#edeef0;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="620">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572" align="center" style="background-color:#ffffff;   padding-left:24px; padding-right:24px;" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:32px;text-align:left;"><span style="color:#161616;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:20px;line-height:32px;text-align:left;">Arcade Core Tables</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="text-align:left;"><a style="color:#4285f4;font-family:Tahoma,Arial,sans-serif;font-size:14px;line-height:150%;text-align:left;text-decoration:underline;" href="https://www.figma.com/file/czHRfS5CBBpyobiA6eMX3B/08.-Arcade-Web-%E2%80%93-Tables?type=design&node-id=1623%3A211092&mode=design&t=HLT2q24vZs8Nfvy1-1">
+<span>Figma Prototype</span></a></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="100%" style="background-color:#ffffff; border-radius:8px; border:1px solid #d4d5d6;" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2024/Dec/Core/images/BvFusTfjyHd6Mism2AsTdbZtBlLtTH.png" width="572" alt="Banner" border="0" style="width: 100%;
+        border-radius:8px; height: auto; display: block;"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Building Master Tables to foster productivity for Tekion designers. When carried out by Schema, Core tables will support all Platforms/Programs, Departments/Modules and Language/Markets. Stay tuned! 🔊</span></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="229" style="vertical-align: middle;  ">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="vertical-align: middle;" width="32"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2024/Dec/Core/images/aJxTFL0Au7DG7dhy9SDhT46DM4mGB6.png" width="32" border="0" style="min-width:32px; width:32px;
+        border-radius:8px; height: auto; display: block;"></td>
+<td style="width:12px; min-width:12px;" width="12"></td>
+<td style="vertical-align: middle;">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="height:15px; vertical-align: middle;">
+<div style="text-align:left;"><span style="color:#000000;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:150%;text-align:left;">Jean-Luc Le Moal</span></div>
+</td>
+</tr>
+<tr>
+<td height="2" style="height:2px; min-height:2px; line-height:2px;"></td>
+</tr>
+<tr>
+<td>
+<div style="text-align:left;"><span style="color:#717171;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:150%;text-align:left;">Design</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="572" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572">
+<table cellpadding="0" cellspacing="0" bgcolor="#edeef0" height="1" width="100%" style="line-height:1px;height:1px!important;background-color:#edeef0;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</body>
+
+</html>
