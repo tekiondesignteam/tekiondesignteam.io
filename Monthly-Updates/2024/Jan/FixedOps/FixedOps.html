@@ -1,0 +1,1059 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+<meta charset="utf-8" />
+<meta content="width=device-width" name="viewport" />
+<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+<meta name="x-apple-disable-message-reformatting" />
+<meta content="telephone=no,address=no,email=no,date=no,url=no" name="format-detection" />
+<title>Fixed Ops Design Updates - January 2024</title>
+<!--[if mso]>
+            <style>
+                * {
+                    font-family: sans-serif !important;
+                }
+            </style>
+        <![endif]-->
+<!--[if !mso]><!-->
+<!-- <![endif]-->
+<style>
+html {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+* {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+td {
+    vertical-align: top;
+    mso-table-lspace: 0pt !important;
+    mso-table-rspace: 0pt !important;
+}
+a {
+    text-decoration: none;
+}
+img {
+    -ms-interpolation-mode:bicubic;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+    u ~ div .email-container {
+        min-width: 320px !important;
+    }
+}
+@media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+    u ~ div .email-container {
+        min-width: 375px !important;
+    }
+}
+@media only screen and (min-device-width: 414px) {
+    u ~ div .email-container {
+        min-width: 414px !important;
+    }
+}
+</style>
+<!--[if gte mso 9]>
+        <xml>
+            <o:OfficeDocumentSettings>
+                <o:AllowPNG/>
+                <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
+        <![endif]-->
+<style>
+@media only screen and (max-device-width: 619px), only screen and (max-width: 619px) {
+
+    .eh {
+        height:auto !important;
+    }
+    .desktop {
+        display: none !important;
+        height: 0 !important;
+        margin: 0 !important;
+        max-height: 0 !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        visibility: hidden !important;
+        width: 0 !important;
+    }
+    .mobile {
+        display: block !important;
+        width: auto !important;
+        height: auto !important;
+        float: none !important;
+    }
+    .email-container {
+        width: 100% !important;
+        margin: auto !important;
+    }
+    .stack-column,
+    .stack-column-center {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        direction: ltr !important;
+    }
+    .wid-auto {
+        width:auto !important;
+    }
+
+    .table-w-full-mobile {
+        width: 100%;
+    }
+
+    
+    
+
+    .mobile-center {
+        text-align: center;
+    }
+
+    .mobile-center > table {
+        display: inline-block;
+        vertical-align: inherit;
+    }
+
+    .mobile-left {
+        text-align: left;
+    }
+
+    .mobile-left > table {
+        display: inline-block;
+        vertical-align: inherit;
+    }
+
+    .mobile-right {
+        text-align: right;
+    }
+
+    .mobile-right > table {
+        display: inline-block;
+        vertical-align: inherit;
+    }
+
+}
+
+</style>
+</head>
+
+<body width="100%" style="background-color:#f5f5f5;margin:0;padding:0!important;mso-line-height-rule:exactly;">
+<div style="background-color:#f5f5f5">
+<!--[if gte mso 9]>
+                <v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
+                <v:fill type="tile" color="#f5f5f5"/>
+                </v:background>
+                <![endif]-->
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td valign="top" align="center">
+<table bgcolor="#ffffff" style="margin:0 auto;" align="center" id="brick_container" cellspacing="0" cellpadding="0" border="0" width="620" class="email-container">
+<tr>
+<td width="620">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="620" style="background-color:#ffffff;  " bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="620" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="620">
+<table cellpadding="0" cellspacing="0" bgcolor="#00bfa5" height="4" width="100%" style="line-height:4px;height:4px!important;background-color:#00bfa5;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="620" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="620">
+<table cellpadding="0" cellspacing="0" bgcolor="#edeef0" height="20" width="100%" style="line-height:20px;height:20px!important;background-color:#edeef0;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="100%">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="100%" style="vertical-align: middle; background-color:#edeef0;   padding-left:24px; padding-right:24px;" bgcolor="#edeef0">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="vertical-align: middle;" width="471">
+<div style="line-height:28px;text-align:left;"><span style="color:#161616;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:22px;line-height:28px;text-align:left;">Fixed Ops Design Updates - January 2024</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="620" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="620">
+<table cellpadding="0" cellspacing="0" bgcolor="#edeef0" height="20" width="100%" style="line-height:20px;height:20px!important;background-color:#edeef0;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="4" style="height:4px; min-height:4px; line-height:4px;"></td>
+</tr>
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="100%" style="vertical-align: middle;  border-width: 0px 0px 1px 0px; border-color:#00bfa5; border-style:solid; padding-left:24px; padding-right:24px;">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="vertical-align: middle;" width="35"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2024/Jan/FixedOps/images/jWBdfVI9QWdTqSy4wOKNqvyidp1xK5.png" width="35" border="0" style="min-width:35px; width:35px;
+         height: auto; display: block;"></td>
+<td style="width:8px; min-width:8px;" width="8"></td>
+<td style="vertical-align: middle;" width="471">
+<div style="line-height:28px;text-align:left;"><span style="color:#161616;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:20px;line-height:28px;text-align:left;">Parts </span></div>
+</td>
+</tr>
+<tr>
+<td height="8" style="height:8px; min-height:8px; line-height:8px;"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="620">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572" align="center" style="background-color:#ffffff;   padding-left:24px; padding-right:24px;" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#161616;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:20px;line-height:24px;text-align:left;">Lock & log price code overrides in Parts RO sales and SO</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:20px;text-align:left;"><a style="color:#4285f4;font-family:Tahoma,Arial,sans-serif;font-size:14px;line-height:20px;text-align:left;text-decoration:underline;" href="https://www.figma.com/file/ixlcviYB1dqfZctKm696ik/Lock-%26-log-price-code-overrides-in-Parts-RO-sales?type=design&node-id=2%3A8256&mode=design&t=55zB5MDSoWY7NyFK-1">
+<span>Figma Design Link</span></a></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="100%" style="background-color:#ffffff; border-radius:8px; border:1px solid #d4d5d6;" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2024/Jan/FixedOps/images/IVrPCyb1mY9XB6eXSA3JRPl2YAH7zh.jpeg" width="572" alt="Banner" border="0" style="width: 100%;
+        border-radius:8px; height: auto; display: block;"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">What?<br></span><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">The feature aims to enhance the Parts Management System by implementing a controlled mechanism for changing price codes and selling prices, thereby ensuring transparency and traceability in the Parts Price Override Report.<br><br></span><span style="color:#444f5c;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Why?<br></span>
+<ul style="margin:0;">
+<li><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Dealerships do not want every Parts user to be able to change price codes and parts selling price</span></li>
+<li><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">In case of price code and selling price overrides, dealerships want to track them in the price override report</span></li>
+<li><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Some dealerships also want to treat price code override as a manual override and treat it with the highest priority</span></li>
+</ul><span style="color:#444f5c;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">How?<br></span>
+<ul style="margin:0;">
+<li><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Restriction on changing price codes and selling prices to specific roles.</span></li>
+<li><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Tracking and reporting of price codes and selling price overrides in the Price Override Report.</span></li>
+<li><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Option for dealerships to treat price code changes as manual overrides with the highest priority.</span></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572" align="center">
+<table class="table-w-full-mobile" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" width="100%" class="stack-column-center">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="100%" align="right">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="48" align="right"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2024/Jan/FixedOps/images/ugUmWEP7oTBH3tFfQajx5ugbLZuazF.png" width="48" border="0" style="min-width:48px; width:48px;
+         height: auto; display: block;"></td>
+<td style="width:12px; min-width:12px;" width="12"></td>
+<td align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Manali More</span></div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#969aa3;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Associate Product Designer</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="572" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572">
+<table cellpadding="0" cellspacing="0" bgcolor="#edeef0" height="1" width="100%" style="line-height:1px;height:1px!important;background-color:#edeef0;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="620">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572" align="center" style="background-color:#ffffff;   padding-left:24px; padding-right:24px;" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#161616;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:20px;line-height:24px;text-align:left;">Electronic Picklist tracking module</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:20px;text-align:left;"><a style="color:#4285f4;font-family:Tahoma,Arial,sans-serif;font-size:14px;line-height:20px;text-align:left;text-decoration:underline;" href="https://www.figma.com/file/BXAk8Hi6RNtnTDk5MO4pgE/Picklist-Tracking-Module?type=design&node-id=2246-2751&mode=design&t=SIaJayUetjixNlDh-4">
+<span>Figma Design Link</span></a></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="100%" style="background-color:#ffffff; border-radius:8px; border:1px solid #d4d5d6;" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2024/Jan/FixedOps/images/ne8GoQ6dbeEo2t9PvPRLEbgfl0o8t3.png" width="572" alt="Banner" border="0" style="width: 100%;
+        border-radius:8px; height: auto; display: block;"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">What?<br></span><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">E picklist tracking a module is a platform for ARC™ users to consume the status of each Picklist<br><br></span><span style="color:#444f5c;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Why?<br></span>
+<ul style="margin:0;">
+<li><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Picking parts for the right Order and right customer at right time is crucial for successful dealership operation.</span></li>
+<li><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Any discrepancy in inventory can be updated in prior through note and comment in these picklists if there is a tracking ability</span></li>
+</ul><span style="color:#444f5c;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">How?<br></span>
+<ul style="margin:0;">
+<li><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">By facilitating the users with parameters such as</span></li>
+<li><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">⁠Document number (RO / SO)</span></li>
+<li><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Customer Name</span></li>
+<li><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Assigned Picker</span></li>
+<li><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Statuses</span></li>
+<li><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Total Parts to be picked</span></li>
+<li><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Time created</span></li>
+<li><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Last modified Time</span></li>
+<li><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Lead time</span></li>
+<li><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Discrepancy Flag</span></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572" align="center">
+<table class="table-w-full-mobile" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" width="100%" class="stack-column-center">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="100%" align="right">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="48" align="right"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2024/Jan/FixedOps/images/QYaGAOzboXvmzOZRt8NmjUwobL4Tkt.png" width="48" border="0" style="min-width:48px; width:48px;
+         height: auto; display: block;"></td>
+<td style="width:12px; min-width:12px;" width="12"></td>
+<td align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Manvith US</span></div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#969aa3;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Product Designer</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="572" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572">
+<table cellpadding="0" cellspacing="0" bgcolor="#edeef0" height="1" width="100%" style="line-height:1px;height:1px!important;background-color:#edeef0;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="572" style="vertical-align: middle;  border-width: 0px 0px 1px 0px; border-color:#00bfa5; border-style:solid; padding-left:24px; padding-right:24px;">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="vertical-align: middle;" width="35"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2024/Jan/FixedOps/images/PjNdlkEZnQBgFzsqyryLxEZCZqyksq.png" width="35" border="0" style="min-width:35px; width:35px;
+         height: auto; display: block;"></td>
+<td style="width:8px; min-width:8px;" width="8"></td>
+<td style="vertical-align: middle;" width="471">
+<div style="line-height:28px;text-align:left;"><span style="color:#161616;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:20px;line-height:28px;text-align:left;">Service</span></div>
+</td>
+</tr>
+<tr>
+<td height="8" style="height:8px; min-height:8px; line-height:8px;"></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="620">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572" align="center" style="background-color:#ffffff;   padding-left:24px; padding-right:24px;" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:28px;text-align:left;"><span style="color:#161616;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:20px;line-height:28px;text-align:left;">Return RO Details for Damage and Rework</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:20px;text-align:left;"><a style="color:#4285f4;font-family:Tahoma,Arial,sans-serif;font-size:14px;line-height:20px;text-align:left;text-decoration:underline;" href="https://www.figma.com/file/hRC0bwEiRGEtGv3ebRmkHs/Payer-and-Pay-Type-Revamp?type=design&node-id=7558-37275&mode=design&t=8JXcSQBAPF0vtlUr-11">
+<span>Figma Design Link</span></a></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="100%" style="background-color:#444f5c; border-radius:8px; border:1px solid #d4d5d6;" bgcolor="#444f5c">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2024/Jan/FixedOps/images/xZOdsHQUB1ekhDuRwb2ClXuk3xlupC.png" width="572" alt="Banner" border="0" style="width: 100%;
+        border-radius:8px; height: auto; display: block;"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">What?<br></span><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Allow Service Advisors to configure which fields are mandatory when capturing Return RO Details, and configure custom reasons<br><br></span><span style="color:#444f5c;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Why?<br></span><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">For RRG dealerships, Service Advisors would like to capture the reasons for a return RO. Eg. damage caused during service, unsatisfactory work that didn’t fix the problem customer came in with. The reasons for return RO will also affect technician’s bonus pay when they are linked with a return RO.<br></span><span style="color:#444f5c;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">How?<br></span>
+<ul style="margin:0;">
+<li><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Add Return RO settings in Service Settings to configure which fields are mandatory when adding Return RO details.</span></li>
+<li><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Select the touchpoints where these settings will apply (eg. Check-In, Appointments, RO)</span></li>
+<li><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Add action to allow users to add Return RO details at any point during the journey</span></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572" align="center">
+<table class="table-w-full-mobile" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" width="100%" class="stack-column-center">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="100%" align="right">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="48" align="right"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2024/Jan/FixedOps/images/S6iZjbtGkur0OL2TI081xJuLLHAxzN.png" width="48" border="0" style="min-width:48px; width:48px;
+         height: auto; display: block;"></td>
+<td style="width:12px; min-width:12px;" width="12"></td>
+<td align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Alok Sharma</span></div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#969aa3;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Product Designer ll</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="572" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572">
+<table cellpadding="0" cellspacing="0" bgcolor="#edeef0" height="1" width="100%" style="line-height:1px;height:1px!important;background-color:#edeef0;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="620">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572" align="center" style="background-color:#ffffff;   padding-left:24px; padding-right:24px;" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#161616;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:20px;line-height:24px;text-align:left;">Inchcape: Consumer Portal & Consumer Scheduling - Actual Price and Tax Changes</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:20px;text-align:left;"><a style="color:#4285f4;font-family:Tahoma,Arial,sans-serif;font-size:14px;line-height:20px;text-align:left;text-decoration:underline;" href="https://www.figma.com/file/e85H6f7ScVZvZjKJQD1fgD/Consumer-Portal?type=design&node-id=7439%3A7119&mode=design&t=mg2Adk6oZLEXAFXZ-1">
+<span>Figma Design Link</span></a></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="572" align="center"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2024/Jan/FixedOps/images/fCT8SW9Mi9kjosdgQx8v52fc13WIll.png" width="572" border="0" style="max-width:572px; width: 100%;
+         height: auto; display: block;"></td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">What?<br></span><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Currently, we show prices in each card as price + tax if we look at the recommended or promotional service page in the Consumer Scheduling & Consumer Portal.<br><br></span><span style="color:#444f5c;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Why?<br></span><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Now we have a new requirement from Inchcape that they need to see tax-inclusive prices and indicate somewhere that the prices displayed are inclusive of tax.<br><br></span><span style="color:#444f5c;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">How?<br></span><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">On the promotional service page, wherever we are showing tax prices, we will show ‘Includes Tax’ as a text and on the service cart page, we will show Tax Including price on mobile and web both.</span></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572" align="center">
+<table class="table-w-full-mobile" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="48" class="stack-column-center" align="center"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2024/Jan/FixedOps/images/zjBqLOM3yKwons6YYyqJCcBMIgAazH.png" width="48" border="0" style="min-width:48px; width:48px;
+         height: auto; display: block;"></td>
+<td class="stack-column-center" height="16" style="width:16px; min-width:16px; height:16px; min-height:16px;" width="16"> </td>
+<td align="center" class="stack-column-center">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td align="right">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Twinkle Rajavat</span></div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#969aa3;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Associate Product Designer</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="572" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572">
+<table cellpadding="0" cellspacing="0" bgcolor="#edeef0" height="1" width="100%" style="line-height:1px;height:1px!important;background-color:#edeef0;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="620">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572" align="center" style="background-color:#ffffff;   padding-left:24px; padding-right:24px;" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#161616;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:20px;line-height:24px;text-align:left;">Write-off Invoices for Warranty (Recyclage)</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:20px;text-align:left;"><a style="color:#4285f4;font-family:Tahoma,Arial,sans-serif;font-size:14px;line-height:20px;text-align:left;text-decoration:underline;" href="https://www.figma.com/file/E2ETLUasXMDspHK3jQINnb/Recyclage---Write-off-Invoices-for-Warranty?type=design&node-id=7%3A45516&mode=design&t=OPwSxPlpubUditD8-1">
+<span>Figma Design Link</span></a></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="570" align="center"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2024/Jan/FixedOps/images/FnJuk7EWy5TB1a6cDCJqHoobdgtzkL.png" width="570" border="0" style="max-width:570px; width: 100%;
+         height: auto; display: block;"></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">What?<br></span><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Warranty admin/ service advisors in RRG need the ability to select a separate ‘Recyclage’ account when reopening a payer (cancelling an invoice) for Warranty payers. This is not possible in our current reopening flow.<br><br></span><span style="color:#444f5c;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Why?<br></span>
+<ul style="margin:0;">
+<li><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Users select the recyclage account when they know that the OEM will not be reimbursing an invoice (by checking the OEM warranty portal called GCM). They therefore cancel this invoice and record this against another account.</span></li>
+<li><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">These cancelled invoices are not sent over to the OEM but are used for internal purposes. So it is necessary to identify which invoices are cancelled on the original payer and which are cancelled on the ‘recyclage’.</span></li>
+<li><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">They do it before the credit posting information is received by the DMS so that the amounts receivable do not build up in the meantime.</span></li>
+</ul><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;"><br></span><span style="color:#444f5c;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">How?<br></span>
+<ul style="margin:0;">
+<li><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Provide the ability to select a recyclage account in the RO reopen flow</span></li>
+<li><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">If this invoice is sent over to RRG, they have to cancel it on the recyclage account.</span></li>
+<li><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">If the invoice is not yet sent over to RRG, they have the option of doing either. Either on the original payer itself, or on the Recyclage account.</span></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572" align="center">
+<table class="table-w-full-mobile" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="48" class="stack-column-center" align="center"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2024/Jan/FixedOps/images/r5KDeUGHFiXok8jbck1xRh9YsFTZOg.png" width="48" border="0" style="min-width:48px; width:48px;
+         height: auto; display: block;"></td>
+<td class="stack-column-center" height="16" style="width:16px; min-width:16px; height:16px; min-height:16px;" width="16"> </td>
+<td align="center" class="stack-column-center">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td align="right">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Vineeth R</span></div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#969aa3;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Senior Product Designer</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="572" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572">
+<table cellpadding="0" cellspacing="0" bgcolor="#edeef0" height="1" width="100%" style="line-height:1px;height:1px!important;background-color:#edeef0;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="620">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572" align="center" style="background-color:#ffffff;   padding-left:24px; padding-right:24px;" bgcolor="#ffffff">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#161616;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:20px;line-height:24px;text-align:left;">Bulk Clock In</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:20px;text-align:left;"><a style="color:#4285f4;font-family:Tahoma,Arial,sans-serif;font-size:14px;line-height:20px;text-align:left;text-decoration:underline;" href="https://www.figma.com/file/n6ldKe473QtlDfr5SK5KCd/Bulk-clock-in?type=design&node-id=0%3A1&mode=design&t=NnPCSrb42uijoSh2-1">
+<span>Figma Design Link</span></a></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="572" align="center"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2024/Jan/FixedOps/images/VJ7T8jwEYqbZsz284MLGtFrawaschh.png" width="572" border="0" style="max-width:572px; width: 100%;
+         height: auto; display: block;"></td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">What?<br></span><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Currently in RRG techs are able to auto clock ops in the same job, so they need some we are trying to provide functionality similar to that<br><br></span><span style="color:#444f5c;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Why?<br></span><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Because we currently lack auto clock or bulk clock in functionalities which is already existing<br><br><br></span><span style="color:#444f5c;font-weight:700;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">How?<br></span><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">As soon as they hover job clock  they will get the opcodes checked (this function was not present earlier), now they can either uncheck jobs or they can directly clockin using the bulk clock in CTA</span></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="height:16px; min-height:16px; line-height:16px;"></td>
+</tr>
+<tr>
+<td width="100%">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="572" align="center">
+<table class="table-w-full-mobile" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="48" class="stack-column-center" align="center"><img src="https://tekiondesignteam.github.io/tekiondesignteam.io/Monthly-Updates/2024/Jan/FixedOps/images/aXRhXvpNySyfhIPTL3ksb0srnyb9Ey.png" width="48" border="0" style="min-width:48px; width:48px;
+         height: auto; display: block;"></td>
+<td class="stack-column-center" height="16" style="width:16px; min-width:16px; height:16px; min-height:16px;" width="16"> </td>
+<td align="center" class="stack-column-center">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td align="right">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="100%" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#444f5c;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Jayrajsinh Jadeja</span></div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div style="line-height:24px;text-align:left;"><span style="color:#969aa3;font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:24px;text-align:left;">Product Designer</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="20" style="height:20px; min-height:20px; line-height:20px;"></td>
+</tr>
+<tr>
+<td width="572" align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="572">
+<table cellpadding="0" cellspacing="0" bgcolor="#edeef0" height="1" width="100%" style="line-height:1px;height:1px!important;background-color:#edeef0;  border-collapse:separate !important;margin:0 auto;text-align:center;">
+<tr>
+<td> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</body>
+
+</html>
